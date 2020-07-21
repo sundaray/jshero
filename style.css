@@ -87,7 +87,7 @@ div.landing-inputs-wrapper {
 }
 
 div.landing-inputs-wrapper input {
-    width: 30%;
+    width: 40%;
     font-size: 1.4rem;
     letter-spacing: .05rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -116,7 +116,7 @@ div.landing-inputs-wrapper input:focus {
 
 #start-quiz-btn {
     font-family: Arial, Helvetica, sans-serif;
-    width: 30%;
+    width: 40%;
     padding: 1.5rem 1rem;
     margin: 1.5rem auto;
     font-size: 1.8rem;
@@ -177,11 +177,11 @@ div.landing-inputs-wrapper input:focus {
 
 @media (max-width: 400px) {
     div.landing-inputs-wrapper input {
-        width: 50%;
+        width: 60%;
     }
 
     #start-quiz-btn {
-        width: 50%;
+        width: 60%;
     }
 
     h1#landing-page-heading {
@@ -198,11 +198,14 @@ div.landing-inputs-wrapper input:focus {
 *********START ADMIN SECTION***********
 **************************************/
 
-section.admin-panel-container {
+
+div.admin-panel-container-one {
     width: 100%;
     height: 100vh;
-    padding: 3rem;
-    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 div.admin-panel-container-two {
@@ -211,15 +214,11 @@ div.admin-panel-container-two {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    left:33%;
-    transform: translate(-50%, -50%);
 }
 
 div.admin-panel-wrapper {
     width: 100%;
-    height: 70%;
+    height: auto;   
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -470,10 +469,10 @@ div.results-list-container {
     height: 80vh;
     background: #D9A679;
     overflow: auto;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left:82%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 div.results-list-container::-webkit-scrollbar {
@@ -554,12 +553,18 @@ div.results-list-container p span {
 }
 /* end of results conatiner */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+
+    div.admin-panel-container-one {
+        flex-direction: column;
+    }
+
+    div.admin-panel-container-two {
+        margin-bottom: 5rem;
+    }
+
     div.results-list-container {
         width: 80%;
-        height: 20vh;
-        top: 110%;
-        left: 50%;
     }
 
     div.admin-panel-container-two {
@@ -581,28 +586,18 @@ div.results-list-container p span {
      
 }
 
+@media (max-width: 600px) {
+    div.forms-wrapper input[type="radio"] {
+        left: -5%;
+    }
+
+}
 
 @media (max-width: 600px) {
 
     div.forms-wrapper input[type="radio"] {
-        left: -3.8%;
+        left: -6%;
     }
-
-    #question-update-btn {
-        margin-right: 18%;
-    }
-}
-
-@media (max-width: 400px) {
-
-    div.forms-wrapper input[type="radio"] {
-        left: -5.5%;
-    }
-
-    #question-update-btn {
-        margin-right: 25%;   
-    }
-
     #new-question-text {
         width: 90%;
      }
@@ -611,33 +606,8 @@ div.results-list-container p span {
         width: 90%;
      }
 
-     div.header h2 {
-        font-size: 2.5rem;
-    }
-
-    #results-clear-btn {
-        padding: .4rem .6rem;
-
-    }
-
-    #admin-logout-btn {
-        padding: .4rem .6rem;
-    }
-
-     
-    #question-update-btn {
-        padding: .4rem .6rem;
-    }
-     
-    #question-delete-btn {
-        padding: .4rem .6rem;
-    }
-
-    div.results-list-container h2 {
-        font-size: 2.5rem;
-    }
-    
 }
+
 
 /**************************************
 ***********END ADMIN SECTION*********
